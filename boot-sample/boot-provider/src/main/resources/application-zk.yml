@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: jzccccProvider
+dubbo:
+  scan:
+    base-packages: com.jzcccc.dubbo.provider.service
+  protocol:
+    name: dubbo
+    port: 20880
+#  metadata-report:
+#    address: zookeeper://127.0.0.1:2181
+  application:
+    name: jzccccProvider
+  registry:
+    address:  zookeeper://127.0.0.1:2181 #N/A
+#    simplified: true
+    parameters:
+      - register-mode: instance
+#    parameters:
+#      - registry-type: service

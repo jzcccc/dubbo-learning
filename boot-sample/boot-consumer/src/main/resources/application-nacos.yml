@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: boot-consumer
+dubbo:
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: nacos://${nacos.server-address}:${nacos.port}/?username=${nacos.username}&password=${nacos.password}
+  metadata-report:
+    address: nacos://${nacos.server-address}:${nacos.port}/?username=${nacos.username}&password=${nacos.password}
+  application:
+    service-discovery:
+      migration: FORCE_APPLICATION # 只消费应用级地址，如无地址则报错，单订阅 3.x 地址
+    name: jzccccConsumerByNacos
+
+
+#nacos 配置
+nacos:
+  server-address: 127.0.0.1
+  port: 8848
+  username: nacos
+  password: nacos

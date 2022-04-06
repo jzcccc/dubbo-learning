@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: nacos
+#    active: zk
+server:
+  port: 8081
